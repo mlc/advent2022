@@ -38,10 +38,14 @@ export function productBy<T>(
   );
 }
 
-export const readSplit = (day: number, separator = '\n', t = false): string[] =>
-  Deno.readTextFileSync(`input${day < 10 ? '0' : ''}${day}${t ? 't' : ''}`)
-    .trim()
-    .split(separator);
+export const readSplit = (
+  day: number,
+  separator = '\n',
+  t = false
+): Promise<string[]> =>
+  Deno.readTextFile(`input${day < 10 ? '0' : ''}${day}${t ? 't' : ''}`).then(
+    (str) => str.trim().split(separator)
+  );
 
 export const setIntersect = <T>(
   set: Set<T> = new Set(),
