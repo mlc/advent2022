@@ -38,13 +38,16 @@ export function productBy<T>(
   );
 }
 
+export const inputFilename = (day: number, t: boolean) =>
+  `input${day < 10 ? '0' : ''}${day}${t ? 't' : ''}`;
+
 export const readSplit = (
   day: number,
   separator = '\n',
   t = false
 ): Promise<string[]> =>
-  Deno.readTextFile(`input${day < 10 ? '0' : ''}${day}${t ? 't' : ''}`).then(
-    (str) => str.trim().split(separator)
+  Deno.readTextFile(inputFilename(day, t)).then((str) =>
+    str.trim().split(separator)
   );
 
 export const setIntersect = <T>(
