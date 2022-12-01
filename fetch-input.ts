@@ -1,5 +1,6 @@
-import { Month, ZonedDateTime } from 'https://esm.sh/@js-joda/core@5.4.2';
-import { writableStreamFromWriter } from 'https://deno.land/std@0.166.0/streams/mod.ts';
+import '@js-joda/timezone';
+import { Month, ZonedDateTime, ZoneId } from '@js-joda/core';
+import { writableStreamFromWriter } from 'streams';
 import { inputFilename } from './util.ts';
 
 const exists = (fn: string): Promise<boolean> =>
@@ -8,7 +9,7 @@ const exists = (fn: string): Promise<boolean> =>
     () => false
   );
 
-const now = ZonedDateTime.now();
+const now = ZonedDateTime.now(ZoneId.of('America/New_York'));
 const day = now.dayOfMonth();
 const year = now.year();
 

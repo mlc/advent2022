@@ -1,0 +1,23 @@
+{
+  "version": "2",
+  "remote": {
+    "https://deno.land/std@0.166.0/_util/asserts.ts": "d0844e9b62510f89ce1f9878b046f6a57bf88f208a10304aab50efcb48365272",
+    "https://deno.land/std@0.166.0/async/deferred.ts": "d8fb253ffde2a056e4889ef7e90f3928f28be9f9294b6505773d33f136aab4e6",
+    "https://deno.land/std@0.166.0/bytes/bytes_list.ts": "aba5e2369e77d426b10af1de0dcc4531acecec27f9b9056f4f7bfbf8ac147ab4",
+    "https://deno.land/std@0.166.0/bytes/equals.ts": "3c3558c3ae85526f84510aa2b48ab2ad7bdd899e2e0f5b7a8ffc85acb3a6043a",
+    "https://deno.land/std@0.166.0/bytes/mod.ts": "b2e342fd3669176a27a4e15061e9d588b89c1aaf5008ab71766e23669565d179",
+    "https://deno.land/std@0.166.0/io/buffer.ts": "245f1762a949082ddc0a6e9b15589d0be2d29c150266decd04320b8a8318f9f6",
+    "https://deno.land/std@0.166.0/io/types.d.ts": "107e1e64834c5ba917c783f446b407d33432c5d612c4b3430df64fc2b4ecf091",
+    "https://deno.land/std@0.166.0/streams/buffer.ts": "b532492d7ba43aecb59b6abdd546c2a47e2442cb4c50850b74311a2ccacfd981",
+    "https://deno.land/std@0.166.0/streams/conversion.ts": "555c6c249f3acf85655f2d0af52d1cb3168e40b1c1fa26beefea501b333abe28",
+    "https://deno.land/std@0.166.0/streams/delimiter.ts": "e18febbded53df275a897fac9249a6d0a6a5efc943256ad0f6cb23bf4d757668",
+    "https://deno.land/std@0.166.0/streams/merge.ts": "88ed3dfa030ae076802688e4cadd762a251a41d81ed1776dfd9a2a9a0e970195",
+    "https://deno.land/std@0.166.0/streams/mod.ts": "f402791689d74bd091ecf8f4015bc5b7d5c18132a55c7c72fe0576d1fb254cf9",
+    "https://esm.sh/v99/*@js-joda/timezone@2.15.0": "feb4876274ce1d780689abcb36fdceab49544fb9be2ac2e57abf996d5a233287",
+    "https://esm.sh/v99/@js-joda/core@5.4.2": "dbc52cb7db017fb60501ee9b83fa9b1aed6fa2e5e9aefce031f5ee261eba90ab",
+    "https://esm.sh/v99/@js-joda/core@5.4.2/deno/core.js": "69ea7b9c4a098212abd6ae1faa93b963e06f038d2159f0e8ce275039edce6dc1",
+    "https://esm.sh/v99/@js-joda/core@5.4.2/typings/js-joda.d.ts": "8fa99ef702b2a0e34f71416770f33d4afb18aa69d3f333a397950957f0dbe755",
+    "https://esm.sh/v99/@js-joda/timezone@2.15.0/X-ZS8q/deno/timezone.js": "549ccecb9b65c7cb394e0a137d7bbceecf5ea43a8bfe0f0b1312422fc865c7d8",
+    "https://esm.sh/v99/@js-joda/timezone@2.15.0/X-ZS8q/typings/js-joda-timezone.d.ts": "2d7a65e1c18496e1f3eee66351b4d127c9ebd77031ec2ffb1f937e64dfd5d48a"
+  }
+}
