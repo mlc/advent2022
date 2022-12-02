@@ -6,7 +6,13 @@ import { inputFilename } from './util.ts';
 const exists = (fn: string): Promise<boolean> =>
   Deno.stat(fn).then(
     ({ isFile }) => isFile,
-    () => false
+    (err: Error) => {
+      if (err instanceof Deno.errors.NotFound) {
+        return false;
+      } else {
+        return Promise.reject(err);
+      }
+    }
   );
 
 const now = ZonedDateTime.now(ZoneId.of('America/New_York'));
