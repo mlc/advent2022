@@ -1,4 +1,4 @@
-import { chunk } from 'chunk';
+import { chunk } from 'collections/chunk.ts';
 import { readSplit, setIntersect, sumBy } from './util.ts';
 
 const parse = (x: string): [Set<string>, Set<string>] => {
