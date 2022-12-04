@@ -1,5 +1,7 @@
 // deno-lint-ignore-file no-explicit-any
 
+export type Pair<T> = [T,T];
+
 export const identity = <T>(x: T): T => x;
 
 export function sumBy(array: ArrayLike<number>): number;
