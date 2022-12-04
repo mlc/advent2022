@@ -1,6 +1,6 @@
 // deno-lint-ignore-file no-explicit-any
 
-export type Pair<T> = [T,T];
+export type Pair<T, U = T> = [T, U];
 
 export const identity = <T>(x: T): T => x;
 
