@@ -1,6 +1,7 @@
 import '@js-joda/timezone';
 import { ZonedDateTime, ZoneId } from '@js-joda/core';
 import { renderFile } from 'https://deno.land/x/dejs@0.10.3/mod.ts';
+import { exec } from 'https://deno.land/x/execute@v1.1.0/mod.ts';
 import { readableStreamFromReader, writableStreamFromWriter } from 'streams';
 
 const now = ZonedDateTime.now(ZoneId.of('America/New_York'));
@@ -16,3 +17,5 @@ const ejs = await renderFile('template.ts.ejs', { date });
 await readableStreamFromReader(ejs).pipeTo(writableStreamFromWriter(file));
 
 console.log(`wrote ${filename}`);
+
+await exec(['git', 'add', filename]);
