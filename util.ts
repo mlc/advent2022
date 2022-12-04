@@ -108,3 +108,16 @@ export const neighbors = (
   }
   return result;
 };
+
+export const show = async (data: string | number) => {
+  console.log(data);
+  const p = Deno.run({
+    cmd: ['xclip', '-i', '-selection', 'clipboard'],
+    stdin: 'piped',
+    stdout: 'inherit',
+    stderr: 'inherit',
+  });
+  await p.stdin.write(new TextEncoder().encode(data.toString()));
+  await p.stdin.close();
+  await p.status();
+};
