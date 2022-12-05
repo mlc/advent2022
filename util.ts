@@ -107,7 +107,7 @@ export const neighbors = (
   return result;
 };
 
-export const show = async (data: string | number) => {
+export const show = async (data: string | number | bigint) => {
   console.log(data);
   const p = Deno.run({
     cmd: ['xclip', '-i', '-selection', 'clipboard'],
@@ -119,3 +119,9 @@ export const show = async (data: string | number) => {
   await p.stdin.close();
   await p.status();
 };
+
+const digits = /-?\d+/g;
+const posDigits = /\d+/g;
+
+export const getNums = (target: string, onlyPositive = true): number[] =>
+  target.match(onlyPositive ? posDigits : digits)?.map(n => parseInt(n, 10)) ?? [];

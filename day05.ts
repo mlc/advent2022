@@ -1,4 +1,4 @@
-import { range, readSplit, show } from './util.ts';
+import { getNums, range, readSplit, show } from './util.ts';
 
 const [init, movesS] = (await readSplit(5, '\n\n', false)) as [string, string];
 
@@ -14,7 +14,7 @@ const parsedG = init.split('\n').flatMap(parseG)
 
 type Move = [count: number, from: number, to: number];
 
-const parseM = (x : string) => [...x.matchAll(/\d+/g)].map(Number) as Move;
+const parseM = (x : string) => getNums(x) as Move;
 
 const flip = (g: string[][]) => {
   const result: string[][] = [];
