@@ -79,13 +79,11 @@ export const addVectors = (
   ...vectors: readonly number[][]
 ): number[] => vector.map((x, i) => vectors.reduce((a, v) => a + v[i], x));
 
-export const range = (start: number, end: number, step = 1) => {
-  const result = [];
+export function* range(start: number, end: number, step = 1) {
   for (let i = start; i < end; i += step) {
-    result.push(i);
+    yield i;
   }
-  return result;
-};
+}
 
 export type Coord = [number, number];
 
