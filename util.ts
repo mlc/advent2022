@@ -127,3 +127,22 @@ export const getNums = (target: string, onlyPositive = true): number[] =>
   target
     .match(onlyPositive ? posDigits : digits)
     ?.map((n) => parseInt(n, 10)) ?? [];
+
+export const forEach2D = <T>(
+  arr: T[][],
+  fn: ([x, y]: Coord, val: T) => void
+) => {
+  for (let x = 0; x < arr.length; ++x) {
+    for (let y = 0; y < arr[x].length; ++y) {
+      fn([x, y], arr[x][y]);
+    }
+  }
+};
+
+export const map2D = <T, R>(
+  arr: T[][],
+  fn: ([x, y]: Coord, val: T) => R
+): R[][] => arr.map((row, x) => row.map((elt, y) => fn([x, y], elt)));
+
+export const inBounds = (arr: any[][], [x, y]: Coord): boolean =>
+  x >= 0 && y >= 0 && x < arr.length && y < arr[x].length;
