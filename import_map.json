@@ -2,13 +2,8 @@
   "imports": {
     "collections/": "https://deno.land/std@0.166.0/collections/",
     "streams": "https://deno.land/std@0.166.0/streams/mod.ts",
-    "@js-joda/core": "https://esm.sh/v99/@js-joda/core@5.4.2",
-    "@js-joda/timezone": "https://esm.sh/v99/*@js-joda/timezone@2.15.0",
-    "mnemonist": "https://esm.sh/v99/*mnemonist@0.39.5"
-  },
-  "scopes": {
-    "mnemonist": {
-      "obliterator": "https://esm.sh/v99/obliterator@2.0.4"
-    }
+    "@js-joda/core": "npm:@js-joda/core@5.4.2",
+    "@js-joda/timezone": "npm:@js-joda/timezone@2.15.0",
+    "mnemonist": "npm:mnemonist@0.39.5"
   }
 }

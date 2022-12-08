@@ -48,12 +48,31 @@
     "https://deno.land/x/lodash@4.17.15-es/isArray.js": "0d9bcdfdf53955d9253076ddd68e0b992b2c91fb8364baa2ca971e57cbb74e4b",
     "https://deno.land/x/lodash@4.17.15-es/isObjectLike.js": "e45d69136695e8568c6fb3c7327f96ac1a8ff7284b1b22f26fb4654255fd0c6c",
     "https://deno.land/x/lodash@4.17.15-es/isSymbol.js": "f0dc1666c3cec2306cd4fd0f63a9a7ab1f25ed21d2db6664b1edc81bd3641a41",
-    "https://deno.land/x/lodash@4.17.15-es/toString.js": "3f4c8d942944c3fe622e9fba36275b6291e834113619b266909822becfa94976",
-    "https://esm.sh/v99/*@js-joda/timezone@2.15.0": "feb4876274ce1d780689abcb36fdceab49544fb9be2ac2e57abf996d5a233287",
-    "https://esm.sh/v99/@js-joda/core@5.4.2": "dbc52cb7db017fb60501ee9b83fa9b1aed6fa2e5e9aefce031f5ee261eba90ab",
-    "https://esm.sh/v99/@js-joda/core@5.4.2/deno/core.js": "69ea7b9c4a098212abd6ae1faa93b963e06f038d2159f0e8ce275039edce6dc1",
-    "https://esm.sh/v99/@js-joda/core@5.4.2/typings/js-joda.d.ts": "8fa99ef702b2a0e34f71416770f33d4afb18aa69d3f333a397950957f0dbe755",
-    "https://esm.sh/v99/@js-joda/timezone@2.15.0/X-ZS8q/deno/timezone.js": "549ccecb9b65c7cb394e0a137d7bbceecf5ea43a8bfe0f0b1312422fc865c7d8",
-    "https://esm.sh/v99/@js-joda/timezone@2.15.0/X-ZS8q/typings/js-joda-timezone.d.ts": "2d7a65e1c18496e1f3eee66351b4d127c9ebd77031ec2ffb1f937e64dfd5d48a"
+    "https://deno.land/x/lodash@4.17.15-es/toString.js": "3f4c8d942944c3fe622e9fba36275b6291e834113619b266909822becfa94976"
+  },
+  "npm": {
+    "specifiers": {
+      "@js-joda/core@5.4.2": "@js-joda/core@5.4.2",
+      "@js-joda/timezone@2.15.0": "@js-joda/timezone@2.15.0_@js-joda+core@5.4.2",
+      "mnemonist@0.39.5": "mnemonist@0.39.5"
+    },
+    "packages": {
+      "@js-joda/core@5.4.2": {
+        "integrity": "sha512-QIDIZ9a0NfDStgD47VaTgwiPjlw1p4QPLwjOB/9+/DqIztoQopPNNAd+HdtQMHgE+ibP3dJacd8/TVL/A1RaaA==",
+        "dependencies": {}
+      },
+      "@js-joda/timezone@2.15.0_@js-joda+core@5.4.2": {
+        "integrity": "sha512-J7afu2PNR71IUvhZW4IBX+BpuuTESk9A1UklZz6T3g3yBsVER60lLueHop1iMXbqnTh85qPQ7NVRbgSYKK4BcA==",
+        "dependencies": { "@js-joda/core": "@js-joda/core@5.4.2" }
+      },
+      "mnemonist@0.39.5": {
+        "integrity": "sha512-FPUtkhtJ0efmEFGpU14x7jGbTB+s18LrzRL2KgoWz9YvcY3cPomz8tih01GbHwnGk/OmkOKfqd/RAQoc8Lm7DQ==",
+        "dependencies": { "obliterator": "obliterator@2.0.4" }
+      },
+      "obliterator@2.0.4": {
+        "integrity": "sha512-lgHwxlxV1qIg1Eap7LgIeoBWIMFibOjbrYPIPJZcI1mmGAI2m3lNYpK12Y+GBdPQ0U1hRwSord7GIaawz962qQ==",
+        "dependencies": {}
+      }
+    }
   }
 }
