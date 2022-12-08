@@ -4,7 +4,7 @@ export type Pair<T, U = T> = [T, U];
 
 export const identity = <T>(x: T): T => x;
 
-export function sumBy(array: ArrayLike<number>): number;
+export function sumBy(array: ArrayLike<number> | ArrayLike<boolean>): number;
 
 export function sumBy<T>(
   array: ArrayLike<T>,
@@ -124,4 +124,6 @@ const digits = /-?\d+/g;
 const posDigits = /\d+/g;
 
 export const getNums = (target: string, onlyPositive = true): number[] =>
-  target.match(onlyPositive ? posDigits : digits)?.map(n => parseInt(n, 10)) ?? [];
+  target
+    .match(onlyPositive ? posDigits : digits)
+    ?.map((n) => parseInt(n, 10)) ?? [];
