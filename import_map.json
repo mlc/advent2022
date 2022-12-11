@@ -4,6 +4,7 @@
     "streams": "https://deno.land/std@0.166.0/streams/mod.ts",
     "@js-joda/core": "npm:@js-joda/core@5.4.2",
     "@js-joda/timezone": "npm:@js-joda/timezone@2.15.0",
-    "mnemonist": "npm:mnemonist@0.39.5"
+    "mnemonist": "npm:mnemonist@0.39.5",
+    "imagescript": "https://deno.land/x/imagescript@1.2.15/mod.ts"
   }
 }
