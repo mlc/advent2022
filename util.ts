@@ -146,3 +146,55 @@ export const map2D = <T, R>(
 
 export const inBounds = (arr: any[][], [x, y]: Coord): boolean =>
   x >= 0 && y >= 0 && x < arr.length && y < arr[x].length;
+
+export const zipWith = <T1, T2, R>(
+  arr1: readonly T1[],
+  arr2: readonly T2[],
+  fn: (arg1: T1, arg2: T2) => R
+): R[] => arr1.map((e1, idx) => fn(e1, arr2[idx]));
+
+export const gcd = (x: number, y: number): number => {
+  if (
+    (!Number.isSafeInteger(x) && !Number.isSafeInteger(y)) ||
+    x < 0 ||
+    y < 0
+  ) {
+    throw new Error('invalid input');
+  }
+  let a: number, b: number;
+  if (x > y) {
+    a = x;
+    b = y;
+  } else {
+    b = x;
+    a = y;
+  }
+  while (b !== 0) {
+    const t = b;
+    b = a % b;
+    a = t;
+  }
+  return a;
+};
+
+export const gcdBig = (x: bigint, y: bigint): bigint => {
+  if (x < 0n || y < 0n) {
+    throw new Error('invalid input');
+  }
+  let a: bigint, b: bigint;
+  if (x > y) {
+    a = x;
+    b = y;
+  } else {
+    b = x;
+    a = y;
+  }
+  while (b !== 0n) {
+    const t = b;
+    b = a % b;
+    a = t;
+  }
+  return a;
+};
+
+export const gcdMany = (...ns: readonly number[]) => ns.reduce(gcd);
