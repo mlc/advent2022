@@ -82,6 +82,8 @@
     "specifiers": {
       "@js-joda/core@5.4.2": "@js-joda/core@5.4.2",
       "@js-joda/timezone@2.15.0": "@js-joda/timezone@2.15.0_@js-joda+core@5.4.2",
+      "graphology": "graphology@0.25.1_graphology-types@0.24.5",
+      "graphology-types": "graphology-types@0.24.5",
       "mnemonist@0.39.5": "mnemonist@0.39.5"
     },
     "packages": {
@@ -92,6 +94,22 @@
       "@js-joda/timezone@2.15.0_@js-joda+core@5.4.2": {
         "integrity": "sha512-J7afu2PNR71IUvhZW4IBX+BpuuTESk9A1UklZz6T3g3yBsVER60lLueHop1iMXbqnTh85qPQ7NVRbgSYKK4BcA==",
         "dependencies": { "@js-joda/core": "@js-joda/core@5.4.2" }
+      },
+      "events@3.3.0": {
+        "integrity": "sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==",
+        "dependencies": {}
+      },
+      "graphology-types@0.24.5": {
+        "integrity": "sha512-m8FVoj9b6MwIaTN+/AvoxXhcK5n0uSe7ZnhbQNTcjh94vzN6m5hU501LihtCfRjF35QEMVrXYOrTNO0wAR1Gxw==",
+        "dependencies": {}
+      },
+      "graphology@0.25.1_graphology-types@0.24.5": {
+        "integrity": "sha512-yYA7BJCcXN2DrKNQQ9Qf22zBHm/yTbyBR71T1MYBbGtywNHsv0QZtk8zaR6zxNcp2hCCZayUkHp9DyMSZCpoxQ==",
+        "dependencies": {
+          "events": "events@3.3.0",
+          "graphology-types": "graphology-types@0.24.5",
+          "obliterator": "obliterator@2.0.4"
+        }
       },
       "mnemonist@0.39.5": {
         "integrity": "sha512-FPUtkhtJ0efmEFGpU14x7jGbTB+s18LrzRL2KgoWz9YvcY3cPomz8tih01GbHwnGk/OmkOKfqd/RAQoc8Lm7DQ==",
